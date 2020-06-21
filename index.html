@@ -52,7 +52,57 @@
         <section class="hero">
             <!--<img src="./img/baner.png" alt="Банер"> -->
             <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-            <a href="" class="button primary">Заказать услугу</a>
+            <!--<a href="" class="button primary data-modal-open">Заказать услугу</a>-->
+    <!-- Мадальное окно-->
+            <button  class="button primary" data-modal-open>Заказать услугу</button>
+                <div class="backdrop is-hidden" data-modal>
+                    <div class="modal">
+                        <form class="form-mod" autocomplete="off">
+                            <h4 class="form-title">Оставьте свои данные, мы вам перезвоним</h4>
+                            <label class="form-field">
+                                <input type="text" class="form-input" name="name" placeholder=" " />
+                                <span class="form-label">Имя</span>
+                                <svg width="18" height="18" class="form-icon">
+                                <use href="./img/symbol-defs.svg#icon-person-black"></use>
+                                </svg>
+                            </label>
+                            <label class="form-field">
+                                <input type="phone" class="form-input" name="phone" placeholder=" " />
+                                <span class="form-label">Телефон</span>
+                                <svg width="18" height="18" class="form-icon">
+                                <use href="./img/symbol-defs.svg#icon-phone-black"></use>
+                                </svg>
+                            </label>
+                            <label class="form-field">
+                                <input type="mail" class="form-input" name="mail" placeholder=" " />
+                                <span class="form-label">Почта</span>
+                                <svg width="18" height="18" class="form-icon">
+                                <use href="./img/symbol-defs.svg#icon-email-black"></use>
+                                </svg>
+                            </label>
+                            <label class="form-field text-area">
+                                <textarea class="form-input comment" name="comment" rows="6" placeholder=" "></textarea>
+                                <span class="comment-label">Комментарий</span>
+                            </label>
+                            <label class="agreement">
+                                <input type="checkbox" name="agreement" class="checkbox" />
+                                <span class="icon-check"></span>
+                                <span class="agreement-text">Соглашаюсь с рассылкой и принимаю
+                                <a href="" class="agreement-link">Условия договора</a></span>
+                            </label>
+                    
+                            <button type="submit" class="button-send button primary">
+                                Отправить
+                            </button>
+                        </form>
+                        <button data-modal-close class="button-close">
+                            <svg width="18" height="18">
+                                <use href="./img/symbol-defs.svg#icon-close-black"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            
         </section>
         <!--Features-->
         <section class="invisibel-features">
@@ -353,9 +403,8 @@
     </main>
     <!-- Footer-->
     <footer class="footer-f">
-        <div class="container">
-            <div class="page-footer">
-                <div class="footer-lg">
+        <div class="container-footer">
+            <div class="footer-lg">
                     <a href="" class="logo-f">
                         <span class="logo-web">Web</span> Studio
                     </a>
@@ -374,47 +423,60 @@
                             </li>
                         </ul>
                     </address>
-                </div>
-                <section class="footer-s">
-                    <h3 class="footer-h">Присоединяйтесь</h3>
-                    <ul class="footer-social">
-                        <li class="aria-footer">
-                            <a class="label-footer" href="" aria-label="Ссылка на Instagram">
-                                <!-- <img src="./img/instagram.svg" alt="instagram"> -->
-                                <svg class="icon">
-                                    <use href="./img/symbol-defs.svg#icon-instagram"></use>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="aria-footer">
-                            <a class="label-footer" href="" aria-label="Ссылка на Twitter">
-                                <!-- <img src="./img/twitter.svg" alt="twitter"> -->
-                                <svg class="icon">
-                                    <use href="./img/symbol-defs.svg#icon-twitter"></use>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="aria-footer">
-                            <a class="label-footer" href="" aria-label="Ссылка на Facebook">
-                                <!-- <img src="./img/facebook.svg" alt="facebook">-->
-                                 <svg class="icon">
-                                     <use href="./img/symbol-defs.svg#icon-facebook"></use>
-                                 </svg>
-                             </a>
-                        </li>
-                        <li class="aria-footer">
-                            <a class="label-footer" href="" aria-label="Ссылка на LinkedIn">
-                                <!--<img src="./img/linkedin.svg" alt="linkedin"> -->
-                                <svg class="icon">
-                                    <use href="./img/symbol-defs.svg#icon-linkedin"></use>
-                                </svg>
-                            </a>
-                        </li>
-                    </ul>
-                </section>
             </div>
+            <div class="footer-s">
+                <h3 class="footer-h">Присоединяйтесь</h3>
+                <ul class="footer-social">
+                    <li class="aria-footer">
+                        <a class="label-footer" href="" aria-label="Ссылка на Instagram">
+                                <!-- <img src="./img/instagram.svg" alt="instagram"> -->
+                            <svg class="icon">
+                                <use href="./img/symbol-defs.svg#icon-instagram"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="aria-footer">
+                        <a class="label-footer" href="" aria-label="Ссылка на Twitter">
+                                <!-- <img src="./img/twitter.svg" alt="twitter"> -->
+                            <svg class="icon">
+                                <use href="./img/symbol-defs.svg#icon-twitter"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="aria-footer">
+                        <a class="label-footer" href="" aria-label="Ссылка на Facebook">
+                                <!-- <img src="./img/facebook.svg" alt="facebook">-->
+                            <svg class="icon">
+                                <use href="./img/symbol-defs.svg#icon-facebook"></use>
+                            </svg>
+                         </a>
+                    </li>
+                    <li class="aria-footer">
+                        <a class="label-footer" href="" aria-label="Ссылка на LinkedIn">
+                                <!--<img src="./img/linkedin.svg" alt="linkedin"> -->
+                            <svg class="icon">
+                                <use href="./img/symbol-defs.svg#icon-linkedin"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul> 
+            </div>
+            <div class="footer-subscription">
+                <h3 class="footer-h">Подпишитесь на рассылку</h3>
+                <form class="footer-form">
+                    <input class="footer-input" type="E-mail" name="email" id="mail" placeholder=" "/>
+                    <label for="mail" class="form-label">E-mail</label>
+                    <button type="submit" class="footer-button">
+                            Подписаться <svg class="footer-icon" width="24" height="24">
+                            <use href="./img/symbol-defs.svg#icon-plant"></use>
+                            </svg>
+                    </button>
+                </form>
+            </div> 
         </div>
             <p class="developer">2020 &#10072; Developed by GoIT Students</p>
     </footer>
+    <!-- Ставим перед закрывающим тегом body -->
+  <script src="./js/modal.js"></script>
 </body>
 </html> 
